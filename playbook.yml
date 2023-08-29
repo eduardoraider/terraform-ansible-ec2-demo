@@ -5,5 +5,11 @@
       pkg:
       - python3
       - virtualenv
-      update_cache: yes  
-    become: yes  
+      update_cache: yes
+    become: yes
+  - name: installing dependencies (pip)
+    pip:
+      virtualenv: /home/ubuntu/backend/venv
+      name: 
+        - django
+        - djangorestframework
